@@ -1,5 +1,8 @@
 /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Defines debugging . */
+#undef DEBUG
+
 /* Define to 1 if you have the <ctype.h> header file. */
 #undef HAVE_CTYPE_H
 
@@ -79,6 +82,9 @@
 
 /* Define to empty if `const' does not conform to ANSI C. */
 #undef const
+
+/* No debugging. */
+#undef kslDEBUGLEVEL
 
 /* Define to rpl_malloc if the replacement function should be used. */
 #undef malloc

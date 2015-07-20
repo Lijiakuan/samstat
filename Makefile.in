@@ -232,6 +232,7 @@ PACKAGE_TARNAME = @PACKAGE_TARNAME@
 PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
+RANLIB = @RANLIB@
 SAMTOOLS = @SAMTOOLS@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -283,7 +284,7 @@ top_srcdir = @top_srcdir@
 VFLAGS = --track-origins=yes --tool=memcheck --leak-check=yes --error-exitcode=1
 AUTOMAKE_OPTIONS = subdir-objects serial-tests
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS}
-SUBDIRS = src 
+SUBDIRS = lib  src dev
 dist_noinst_SCRIPTS = autogen.sh
 all: all-recursive
 
