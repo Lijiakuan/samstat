@@ -1,26 +1,15 @@
-To build:
-	cd src
-	type make
+SAMstat version 1.5
 
-Documentation:
+Installation:
 
-	Usage:   samstat <file.sam> <file.bam> <file.fa> <file.fq> .... 
-	Options:
-		-s             STR    prints summary statistics of multiple libraries into one FILE [NA].
-		-k             INT    treat all reads mapping more than k errors as unmapped [off].
-		-n             STR    name of library and output file when reading from stdin
-		-f             STR    specifies the format when reading from stdin.
-		-F             INT    filter used in samtools [768].
+Unpack the tarball:
+bash-3.1$ tar -zxvf samstat-XXX.tar.gz
+bash-3.1$ cd samstat
+bash-3.1$ ./configure
 
-	Example: Reading from standard input:
+bash-3.1$ make
+bash-3.1$ make check
 
-	cat library.sam | samstat -f sam -n library_one
-	or:
-	samtools view -ub  ~/tmp/small.bam   | ./samstat -f bam -n library_one
+At this point the samstat executable appears in the src directory. You can copy it to any directory in your path. To install it system wide type:
 
-	In both cases SAMStat will list the stats in the file "library_one.html"
-
-Contact:
-
-Timo Lassmann <timolassmann@gmail.com>
-
+bash-3.1$ make install
